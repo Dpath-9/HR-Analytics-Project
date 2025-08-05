@@ -37,6 +37,20 @@ HR-Analytics-Project/
 
 ---
 
+## 🧼 Data Cleaning Notes
+
+### 🗓 Handling Mixed Date Formats in Excel
+
+While cleaning the `DOB` column, the dataset had inconsistent formats like `02-11-1970` and `05/24/79`. Some were recognized as dates, while others were stored as text due to system locale differences.
+
+**Fix Applied:**
+Used Excel’s `Text to Columns` → selected `Date` format → chose `MDY`.  
+This converted all entries into proper date format (`dd-mm-yyyy`) for consistent downstream use like age and tenure calculations.
+
+✅ This step was crucial to avoid calculation errors and reflects real-world challenges in raw HR data.
+
+---
+
 ## 🚀 Tools & Technologies
 - Excel
 - SQL Server
